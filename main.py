@@ -75,6 +75,8 @@ class Display(object):
         next_but.pack(side='bottom')
         self.error = Label(button_frame, text='', wraplengt=100, fg='red')
         self.error.pack(side='top')
+        self.progress = Label(button_frame, text='progress: 1/' + str(self.sample_size))
+        self.progress.pack(side='top')
 
         self.root.mainloop()
 
@@ -134,6 +136,7 @@ class Display(object):
             self.img2.configure(file=image_folder + '2.png')
             self.img3.configure(file=image_folder + '3.png')
             self.i += 1
+            self.progress.configure(text='progress: ' + str(1 + int(self.i/2)) + '/' + str(self.sample_size))
         return
 
 
