@@ -163,6 +163,10 @@ def start_reeks5(popup):
     popup.destroy()
     Display('reeks5')
 
+def start_reeks6(popup):
+    popup.destroy()
+    Display('reeks6')
+
 
 if __name__ == '__main__':
     popup = Tk()
@@ -197,4 +201,6 @@ if __name__ == '__main__':
     reeks4But.pack(side='left', pady=10, padx=10)
     reeks5But = Button(popup, text="start reeks5", fg="black", command=lambda: start_reeks5(popup))
     reeks5But.pack(side='left', pady=10, padx=10)
+    reeks6But = Button(popup, text="start reeks6", fg="black", command=lambda: start_reeks6(popup))
+    reeks6But.pack(side='left', pady=10, padx=10)
     popup.mainloop()
